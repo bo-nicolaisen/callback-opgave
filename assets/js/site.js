@@ -55,50 +55,7 @@ console.log('setupStatics called');
 //---------------------------------------------------------------------------------------------------------------------
 
 // Callback for creating a new list (model code) with switch and appState
-function newCallback() {
 
-    switch (appState) {
-        case "listView":
-               console.log('create new list');
-    newListCreationView();
-            break;
-
-             case "itemView":
-               console.log('create new item');
-    newItemCreationView(activeList);
-            break;
-    
-        default:
-            console.error('Unknown app state:', appState);
-            break;
-    }
-   
-}
-
-// List click callback function with switch for different actions on the list
-function listClickCallback(action, index) {
-    console.log('List click action:', action, 'Index:', index);
-    switch (action) {
-        case 'showList':
-            console.log(' list clicked show items');
-            appState = "itemView";
-            activeList = index;
-            listItemView();
-            break;
-
-             case 'deleteList':
-            console.log(' list delete clicked');
-            break;
-
-            case 'editList':
-            console.log(' list edit clicked');
-            break;
-
-        default:
-            console.error('Unknown action:', action);
-            break;
-    }
-}
 
 //---------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------
